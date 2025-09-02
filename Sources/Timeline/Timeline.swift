@@ -109,20 +109,19 @@ private struct MarkerInfoPreferenceKey: PreferenceKey {
 
 #Preview {
     Timeline {
-        TimelineEntry(marker: .init { _, _ in Image(systemName: "checkmark.seal") }) {
-                Text("Entry with custom marker")
-            }
-            Text("Additional content")
-                .font(.title)
-            TimelineEntry {
-                Text("Timeline continuation, defaults")
-            }
-            TimelineEntry(connector: .init(style: .orange, dashed: true)) {
-                Text("Custom connectors")
-            }
-            TimelineEntry {
-                Text("The end")
-            }
+        TimelineEntry(marker: .init { _ in Image(systemName: "checkmark.seal") }) {
+            Text("Entry with custom marker")
+        }
+        Text("Additional content")
+            .font(.title)
+        TimelineEntry {
+            Text("Timeline continuation, defaults")
+        }
+        TimelineEntry(connector: .init(style: .orange, dashed: true)) {
+            Text("Custom connectors")
+        }
+        TimelineEntry {
+            Text("The end")
         }
     }
 }
